@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정의하고 호출하기</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        //함수 이름짓기 규칙은 변수와 같다.
+        //기능을 정의하는 만큼, 동사를 사용하는 것이 좋다!
+        // 선언문으로 만든 함수
+        // ; 호이스팅 가능 : 함수 만드는 부분이 호출하는 부분보다 아래에 있어도 됨
+           // sayYes() => 호출하는 부분 위에 있어도 됨
+        function sayYes(){
+            console.log(1)
+            console.log(2)
+            alert("yes!")
+        }
+
+     
+        //sayNo() => 이건 안됨
+        // 표현식으로 만든 함수
+        // 호이스팅이 불가능 : 함수 만드는 부분이 함수 호출보다 위에 있어야함
+        const sayNo = function(){
+            alert("No!")
+            console.log(3)
+        }
+        // sayNo()=> 이건 됨
+
+
+        createParagraph()
+        createParagraph()
+        createParagraph()
+        createParagraph()
+        createParagraph()
+
+        function createParagraph(){
+            const p = document.createElement("p")
+            p.textContent = "새롭게 만들어진 문단 태그"
+            document.querySelector("#container").append(p)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 메소드 및 속성</title>
+</head>
+<body>
+    <h1 id="song-title" class="heading" title="VOS의 2019년 발매곡">
+        <span>다시 만날까 봐</span>
+    </h1>
+    <p class="lyrics">
+        인스타로 몰래 보는 너의 하루들 누가 봐도 헤어진 티를 내
+    </p>
+    <p class="lyrics">
+        팔로우 다 끊고서 좋아요는 왜 눌렀니 (ㅋㅋ)
+    </p>
+
+
+    <script>
+        // document.querySelector는 첫번째 클래스만 선택됨
+        // document.querySelectorAll은 전부 다 선택됨
+        console.log(document.querySelectorAll(".lyrics"))
+        // 선택자가 아니라 오로지 클래스 이름으로 선택한다.
+        console.log(
+        document.getElementsByClassName("lyrics")
+        )
+        // 특정 id 요소만 선택
+        // title이라는 상수에 저장
+        const title = document.getElementById("song-title")
+        console.log(title)
+
+        //innerText ; textContent와 같은 역할
+        //textContent ; 코드 상에 존재하는 공백을 포함함
+        console.log(title.textContent)
+        //innerText ; 공백은 없고 오로지 텍스트만
+        console.log(title.innerText)
+
+        //className ; 클래스 값 보여주기
+        console.log(title.className)
+
+        //내가 정의한 스타일들 보여줌
+        console.log(title.style)
+
+        //해당 요소의 타이틀
+        console.log(title.title)
+    </script>
+
+</body>
+</html>

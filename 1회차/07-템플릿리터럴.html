@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿 리터럴</title>
+</head>
+<body>
+    <script>
+        // const str = `그렇다면 이건 될까? ${prompt('그렇다면 이건 될까?')}`;
+        // console.log(str)
+
+        // const dog = "강아지"
+        // const cat = `고양이`
+        // console.log(typeof cat)
+
+         const modifier = "귀여운"
+        //const prettyDog = `${modifier} 공백 ${dog} 좋아요!`
+        // console.log(prettyDog)
+
+        // ${}에는 데이터가 들어가는데 코드 표현식을 써서 데이터를 얻어내기만 해도 됨
+        const prettyPet = `${modifier} ${prompt("좋아하는 동물은?")}`
+        console.log(prettyPet)
+    </script>
+</body>
+</html>

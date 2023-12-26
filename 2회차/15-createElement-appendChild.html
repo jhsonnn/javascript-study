@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement & appendChild</title>
+</head>
+<body>
+    
+    <div id = "container">
+
+    </div>
+
+    <script>
+    //     const div = document.getElementById("container")
+        
+    //     //요소 만들기
+    //     const box = document.createElement("div")
+    //     console.log(box)
+    //     //=>box; 웹 요소
+    //     box.style.color = "blue" //=> js에서는 스타일 지정할 때 문자열이나 숫자로만 쓸 수 있다
+    //     box.style.width = "200px"
+    //     box.style.height = "200px"
+    //     box.textContent = "헷갈리지만 신기하고 재미있다!"
+
+    //     //만들어진 요소 화면에 추가
+    //     //appendChild() ; HTML 태그만 추가 가능, 단순한 문자열은 X
+    //    // div.appendChild(box)
+    //     //=> 이건 불가 // div.appendChild("문자열")
+    //     //추가하고서 본인이 추가한 내용이 뭔지 console에 반환해줘서 확인 가능
+    //    // console.log(div.appendChild(box))
+    //     //append() ; HTML 태그와 단순한 문자열 모두 추가 가능
+    //     //div.append(box)
+    //     //추가하고서 본인이 추가한 내용 확인 불가(반환하지 X)
+    //     // => undefined!
+    //     console.log(div.append(box))
+       
+        //위의 내용 5번 반복하기
+        for(let i = 0; i < 5; i+= 1){
+            const div = document.getElementById("container")
+            const box = document.createElement("div")
+            box.style.color = "blue"
+            box.style.width="200px"
+            box.style.height="200px"
+            box.textContent = "헷갈리지만 신기하고 재미있다!"
+            div.append(box)
+        }
+    </script>
+</body>
+</html>

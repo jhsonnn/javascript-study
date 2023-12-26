@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산</title>
+</head>
+<body>
+    <!-- <script>
+        // let age = prompt("당신의 나이는?")
+        // prompt를 이용해 받은 내용은 문자열로 저장이 된다.
+        // 그런데 age에 순수 숫자로만 입력 값을 저장하고 싶다.
+        // window.parseInt() 메서드를 사용하면 순수 Int로 값을 바꿀 수 있음
+
+        let age = parseInt(prompt("당신의 나이는?"))
+        //console.log(typeof age) //=> number로 출력됨
+        //console.log(20 <= age) //=> 20이상인 값 입력하면 true, 아니면 false
+        console.log(20 === age) //=>자료형과 값이 모두 같아야함. 엄격한 등가비교
+    </script> -->
+
+    <script>
+        let name = prompt("당신의 이름은?")
+        //write() ; DOM에 코드를 추가할 때 사용하는 메소드
+        // document.write(name) //=> 화면에 입력한 내용이 나타남
+        // document.write("손지형" === name) //=> 같은 내용이 입력되면 화면에 true가 나타남
+        document.write(`사용자의 이름은 ${name}입니다.<br>`)
+        document.write(`우리가 찾던 사람인가? ${"손지형" === name}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 & 이벤트 핸들링</title>
+</head>
+<body>
+
+    <button id="span">SPAN</button>
+    <button id="strong">STRONG</button>
+    <button id="mark">MARK</button>
+    <hr>
+
+    <script>
+        const spanBtn = document.getElementById("span")
+        const strongBtn = document.getElementById("strong")
+        const markBtn = document.getElementById("mark")
+        
+        //1. 함수 선언방식 사용방법
+        // function handleClick(){
+        //     alert("span Click!")
+        // }
+        // spanBtn.onclick = handleClick
+
+        //2. 함수 표현식 사용방법
+        // spanBtn.onclick = function(){
+        //     // alert("span Click!")
+        //     const span = document.createElement("span")
+        //     span.textContent = "새로 생긴 span 태그입니다."
+        //     document.body.append(span)
+        // }
+    
+        //3. 이벤트 리스너 이용 방법
+        // spanBtn.addEventListener("click", function(){
+        //     // alert("span Click!")
+        //     const span = document.createElement("span")
+        //     span.textContent = "새로 생긴 span 태그입니다."
+        //     document.body.append(span)
+        // })
+        
+        //4. 이벤트 객체 사용
+        const handleClick = function(event){
+            // console.log(event.target.id)
+            if(event.target.id === "span"){
+                const span = document.createElement("span")
+                span.textContent = "span 태그"
+                document.body.append(span)
+            }else if(event.target.id === "strong"){
+                const strong = document.createElement("strong")
+                strong.textContent = "strong 태그"
+                document.body.append(strong)
+            }else if(event.target.id === "mark"){
+                const mark = document.createElement("mark")
+                mark.textContent = "mark 태그"
+                document.body.append(mark)
+            }
+        }
+
+        spanBtn.addEventListener("click", handleClick)
+        strongBtn.addEventListener("click", handleClick)
+        markBtn.addEventListener("click", handleClick)
+        
+    </script>
+</body>
+</html>
