@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 통신</title>
+</head>
+<body>
+    
+    <button id="push">PUSH</button>
+    <hr />
+    <img src="" alt="강아지 사진">
+
+    <script>
+        //오픈소스 api
+        //https://dog.ceo/api/breeds/image/random
+        
+        const rqs = new XMLHttpRequest()
+        const button = document.getElementById("push")
+
+        //push버튼을 클릭 했을 때, 요청 만들고 처리하기
+        button.addEventListener("click", function(){
+            //요청 만들기
+            //인수 2가지 : form 속성 중 method 속성: get/post, 요청 보낼 주소
+                    // form에서 전송 데이터를 보낼 때 전송방식을 get으로 할지 post로 할지       
+            rqs.open("get", "https://dog.ceo/api/breeds/image/random")
+            //load ; 응답이 잘 왔을 때
+            rqs.addEventListener("load", function(){
+                //alert("!")
+                //강아지 사진 잘 받기
+                //rqs 객체의 response ; 
+                //request가 보낸 응답 요청이 잘 처리되면 requset객체에는 response키가 업데이트 되고 응답 데이터가 대입됨
+                //console로 : console.log(rqs.response)//강아지 소스가 포함된 url이 문자열 형태로 찍힘
+                //이걸 JSON형태로 parse하면 객체 형태로 다룰 수 있게됨
+                //console 로 : console.log(JSON.parse(rqs.response))
+
+                //응답이 오면, 객체로 처리
+                const result = JSON.parse(rqs.response)
+                //console로 : 객체에서 message만 따로 빼서 봄(강아지 사진 소스만)
+                //console.log(result.message)
+                
+                //이미지를 선택해서 소스 속성 바꾸기!
+                const img = document.querySelector("img")
+                img.src = result.message
+            })
+
+            //요청 보내기
+            rqs.send()
+            //서버로 부터 온 응답 처리(send하기 전에 이벤트 처리 먼저 해야함)
+        })
+
+
+        
+
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빌트인 객체 math</title>
+</head>
+<body>
+    
+    <button id="draw">추첨</button>
+    <p id="number"></p>
+
+    <script>
+        const button = document.getElementById("draw")
+        const p = document.getElementById("number")
+
+        // console.log(Math.sqrt(4))
+        // console.log(Math.abs(-4))
+        
+        // //random ; 0~1 사이의 랜덤 숫자를 반환
+        // let rn = Math.random()
+        // //floor ; 소수점 이하를 버림, 1~10 사이 숫자
+        // console.log(Math.floor(rn*10))
+        // //0이 안나오게 하고 싶음(1을 더함)
+        // //1~11 사이의 랜덤 숫자
+        // console.log(Math.floor(rn*10) + 1)
+
+        // //=>
+        // const MAX_NUM = 10
+        // const MIN_NUM = 1
+        // console.log(Math.floor(rn * MAX_NUM) + MIN_NUM)
+
+        //버튼 누를 때 마다 랜덤 숫자 만들어서 출력하는 코드
+        const MAX_NUM = 10
+        const MIN_NUM = 1
+
+        button.addEventListener("click", function(){
+            p.textContent = Math.floor(Math.random() * MAX_NUM) + MIN_NUM
+        })
+    </script>
+</body>
+</html>

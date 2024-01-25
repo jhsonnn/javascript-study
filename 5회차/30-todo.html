@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일 목록</title>
+    <link href="30-todo.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="container">
+        <div class="app">
+            <h1>TO DO LIST</h1>
+            <ul id="todo-list"></ul>
+            <form id="todo-form">
+                <input name="todo"
+                placeholder="TO DO..."
+                autocomplete="off"
+                >
+                <!-- autocomplete="off" ; 자동완성 방지 -->
+                <input type="submit" value="추가">
+
+            </form>
+        </div>
+
+    </div>
+    
+
+    <script src="30-todo.js"></script>
+</body>
+</html>

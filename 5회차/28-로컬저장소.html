@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬 저장소</title>
+</head>
+<body>
+    
+    <p id="item">이봉주</p>
+    <button id="set">SET</button>
+    <button id="get">GET</button>
+    <button id="remove">REMOVE</button>
+    <button id="clear">CLEAR</button>
+
+    <script>
+
+        const item = document.getElementById("item")
+        //setItem()
+        document.getElementById("set").addEventListener("click", function(){
+            //아이템 저장, key, value
+            window.localStorage.setItem("마라토너", item.textContent)
+        })
+        //getItem()
+        document.getElementById("get").addEventListener("click", function(){
+            alert(localStorage.getItem("마라토너"))
+        })
+        //removeItem()
+        document.getElementById("remove").addEventListener("click",function(){
+            localStorage.removeItem("마라토너")
+        })
+        //clear()
+        document.getElementById("clear").addEventListener("click", function(){
+            localStorage.clear()
+        })
+
+        //로컬스토리지는 문자열만 저장한다
+        //따라서 객체 리터럴 타입으로는 setItem()으로 저장이 안되고
+        localStorage.setItem("커피", {
+            name : "에티오피아",
+            taste: "산미"    
+        })
+        //stringify를 이용하여 저장해야한다
+        localStorage.setItem("커피", JSON.stringify({
+            name : "에티오피아",
+            taste: "산미"    
+        }))
+    </script>
+</body>
+</html>

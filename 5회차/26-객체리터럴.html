@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 리터럴</title>
+</head>
+<body>
+    
+
+    <script>
+        //객체리터럴은 생성자와 비슷 그러나 동작의 특성이 서로 다름
+        //생성자 ;  객체를 설계한 함수 => 이걸 호출하면 생성자 함수가 만들어짐
+        //객체리터럴 ; 객체를 이렇게 만들겠다는 선언, 생성자처럼 만들고 호출해야지 만들어지는 것이 아니라
+                    //즉각 객체 형태의 데이터를 만듦
+
+        const cat = {
+            species : "포유류",
+            title : "고양이"
+        }
+        console.log(cat)
+        console.log(cat.species)
+        console.log(cat["title"])
+
+
+        //스프레드 연산 ; 객체를 그대로 가져와서 확장하는 형태
+        const gookhee ={
+            ...cat,
+            name : "국희",
+            age : 4,
+            favourite: ["끈", "창틀", "햇살"]
+        }
+
+        console.log(gookhee)
+        //배열 자체 출력
+        console.log(gookhee.favourite)
+        //대괄호 벗겨내고 안의 내용만 복사해서 출력
+        console.log(...gookhee.favourite)
+
+    </script>
+</body>
+</html>

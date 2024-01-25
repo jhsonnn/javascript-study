@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    /* 스크롤 이동 부드럽게 */
+    scroll-behavior: smooth;
+}
+html, body{
+    margin: 0;
+}
+#container{
+    width: 100%;
+    /* 아무리 커져도 가로로 640px 안넘게 */
+    max-width: 640px;
+    /* 여백 좌우에 맞추기 */
+    margin: auto;
+}
+header{
+    width: 100%;
+    max-width: 640px;
+    height: 60px;
+    border-bottom: 1px solid #00000033;
+    background-color: #FFFFFF;
+    display: flex;
+    /* 양 끝에 간격을 주고 정렬 */
+    justify-content: space-around;
+    align-items: center;
+    /* 스크롤이 올라가도 header는 그대로 있도록 */
+    position: fixed;
+    top: 0;
+}
+.header__search{
+    display: flex;
+    align-items: center;
+}
+input, button, select{
+    height: 30px;
+    border: 0.5px solid gray;
+}
+main{
+    display: flex;
+    justify-content: space-evenly;
+    /* 여러 줄로 배치되도록 */
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.more, .tothetop{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    cursor: pointer;
+}
+.more{
+    color: #FFFFFF;
+    background-color: #cd8f6b;
+    left: 100px;
+    bottom: 100px;
+}
+.tothetop{
+    color: #FFFFFF;
+    background-color: #AB4A12;;
+    right: 100px;
+    bottom: 100px;
+}

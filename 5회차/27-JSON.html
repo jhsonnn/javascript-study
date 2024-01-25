@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    
+    <script>
+        //JSON ; 자바스크립트 객체 리터럴을 문자열 형식으로 변환한 것
+
+        // const meal = {
+        //     what : "제육볶음",
+        //     who : "아내",
+        //     when : "어제 저녁"
+        // }
+        // console.log(typeof meal)
+
+        //JSON 형식으로 변환하기
+        //중괄호를 백틱으로 묶고, 키 값을 따옴표로 표기
+        // const meal = `{
+        //     "what" : "제육볶음",
+        //     "who" : "아내",
+        //     "when" : "어제 저녁"
+        // }`
+        // console.log(typeof meal)
+
+        //JSON 이라는 객체를 이용해서 JSON 형식으로 변환하기
+        const meal = {
+            what : "제육볶음",
+            who : "아내",
+            when : "어제 저녁"
+        }
+        console.log(meal)
+        //stringify ; 객체 리터럴에서 문자열 형태로 변환
+        JSON.stringify(meal)
+        console.log(JSON.stringify(meal))
+        //parse ; 그 반대(문자열에서 객체 리터럴 형태로 변환)
+        //stringify한 걸 변수에 저장해서 parse
+        let sm = JSON.stringify(meal)
+        console.log(JSON.parse(sm))
+
+        console.log(typeof meal)
+    </script>
+</body>
+</html>

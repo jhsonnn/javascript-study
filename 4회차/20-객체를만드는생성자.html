@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를 만드는 생성자</title>
+</head>
+<body>
+    
+    <script>
+        //생성자; 
+        // 함수인데, 객체를 생성할 목적으로 정의하는 함수. 설계도 개념
+        // 자바스크립트에서 기본으로 제공하지 않는 데이터 유형을 직접 만들 수 있다.
+    
+    
+        //생성자 함수. 기능을 정의하는 함수는 아님
+        function BestSinger(){
+            this.name = "VOS"
+            this.member = "박지헌, 최현준, 김경록"
+            //BestSinger의 singing이라는 메소드
+            this.singing = function(){
+                console.log("니 이름 불렀나 봐~ 나 술에 취해서~")
+            }
+        }
+        // //함수 호출
+        // //생성자 함수는 기능을 정의하는 함수가 아니므로
+        // //호출문 앞에 new라는 키워드를 붙인다
+        // const vos = new BestSinger()
+        // console.log(vos.name)
+        // console.log(vos.member)
+        // vos.singing()
+
+        // //재사용 가능
+        // const vos2 = new BestSinger()
+        // console.log(vos2.name)
+        // console.log(vos2.member)
+        // vos2.singing()
+
+
+        //매개변수를 포함한 생성자
+        function Singer(name, member){
+            this.name = name
+            this.member = member
+        }
+
+        const noel = new Singer("노을", "강균성, 전우성, 이상곤, 나성호")
+        console.log(noel.name)
+        console.log(noel.member)
+
+    </script>
+</body>
+</html>
